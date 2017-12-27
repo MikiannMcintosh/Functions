@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+void counterFunction();
+
+// Main Function
+int main() {
+	// Local Variables
+	int phoneNumber;
+	char another = 'n';
+
+	do {
+		cout << "Enter a phone number:" << endl;
+		cin >> phoneNumber;
+		cout << "Do you want to enter another? Enter y or n. " << endl;
+		cin >> another;
+		counterFunction();
+	} while (another == 'y');
+
+	return 0;
+}
+
+void counterFunction() {
+	static int count = 0;
+	cout << "This is phone number No. " << ++count << endl;
+}
