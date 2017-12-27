@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void weeklyPay(double annualSalary, int weeksWorked);
+void weeklyPay(double annualSalary);
+
+// Main Function
+int main() {
+	double salary;
+
+	cout << "What is the annual salary of the employee? " << endl;
+	cin >> salary;
+	weeklyPay(salary);
+	weeklyPay(salary, 40);
+}
+
+void weeklyPay(double annualSalary, int weeksWorked) {
+	cout << setprecision(5) << "The weekly pay for " << weeksWorked << " weeks is: " << annualSalary / weeksWorked << endl;
+}
+
+void weeklyPay(double annualSalary) {
+	cout << setprecision(5) << "The weekly pay for 52 weeks is: " << annualSalary / 52 << endl;
+}
