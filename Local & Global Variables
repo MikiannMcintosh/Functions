@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+void testFunction();
+
+const int globalVariable = 4;
+
+// Main Function
+int main() {
+	// Local Variables
+	int mainVariable = 5;
+
+	testFunction();
+
+	cout << "In the main function, the global variable is now : " << globalVariable << endl;
+	
+	return 0;
+}
+
+void testFunction() {
+	// Function Local Variable
+	int localVariable = 0;
+
+	cout << "This local variable is here: " << localVariable << endl;
+	cout << "In the test function, the global variable is : " << globalVariable << endl;
+}
