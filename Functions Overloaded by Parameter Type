@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void weeklyPay(double annualSalary, int weeksWorked);
+void weeklyPay(int annualSalary, int weeksWorked);
+
+// Main Function
+int main() {
+	int salary;
+
+	cout << "What is the annual salary of the employee? " << endl;
+	cin >> salary;
+	// The function matching the parameter type of "salary" will be executed.
+	weeklyPay(salary, 40);
+}
+
+void weeklyPay(double annualSalary, int weeksWorked) {
+	cout << setprecision(5) << "The weekly pay for " << weeksWorked << " weeks is: " << annualSalary / weeksWorked << endl;
+}
+
+void weeklyPay(int annualSalary, int weeksWorked) {
+	cout << "The weekly pay for " << weeksWorked << " weeks is: " << annualSalary / weeksWorked << endl;
+}
